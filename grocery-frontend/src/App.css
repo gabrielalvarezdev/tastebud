@@ -1,0 +1,258 @@
+/*
+
+                                             MAIN APP
+
+*/
+.App {
+  text-align: center;
+  display: flex;
+}
+.App-logo {
+  height: 50vmin;
+  pointer-events: none;
+}
+.App-logo-topleft {
+  height: 8vmin;
+  pointer-events: none;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  align-items: center;
+}
+.App-contents {
+  background-color: #d56073;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-image: linear-gradient(#ff3859, #9c0606);
+}
+.App-link {
+  color: #61dafb;
+}
+/*
+
+                                              SIDEBAR
+
+*/
+.sidebar {
+  width: 200px;
+  background-color: #d56073;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(#ff3859, #9c0606);
+  justify-content: center;
+  position: relative; /* Added to enable absolute positioning for the logo */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  font-size: x-large;
+  margin-top: 200%;
+}
+.sidebar li {
+  margin-bottom: 20%;
+  margin-left: 5%;
+  justify-content: center;
+  text-align: left;
+}
+.sidebar button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.sidebar button:hover {
+  color: #ffff79;
+}
+
+/*
+
+                                        KITCHEN DATA PANE
+
+*/
+.content {
+  flex-grow: 1;
+  padding: 0px;
+}
+.data-pane {
+  height: 87vh;
+  width: 160vh;
+  padding: 20px;
+  position: relative;
+  background-color: transparent;
+  background-image: transparent;
+  margin-left: 60px;
+  border-radius: 20px;
+}
+.data-pane tr th {
+  font-size: 20px;
+  padding-bottom: 10px;
+  background-color: #f4324f;
+  color: #ffffff;
+}
+.data-pane tr td {
+  font-size: 16px;
+  padding: 5px;
+}
+.data-pane tr {
+  text-transform: capitalize;
+  flex-direction: row;
+  text-align: left;
+  color: rgb(102, 29, 29);
+  list-style-type: none;
+  padding: 0px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #fffdcf;
+}
+.data-pane li {
+  margin-bottom: 5px;
+}
+.data-pane table {
+  table-layout: auto;
+  width: 160vh;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-top: 70px;
+}
+.b1 {
+  color: #ffffff;
+  background-color: rgb(167, 192, 125);
+  border-radius: 20px;
+  height: 24px;
+  width: 24px;
+  border: none;
+  margin-right: 5px;
+  font-size: 20px;
+}
+.b2 {
+  color: #ffffff;
+  background-color: rgb(216, 89, 89);
+  border-radius: 20px;
+  height: 24px;
+  width: 24px;
+  border: none;
+  font-size: 20px;
+}
+.b1:hover {
+  background-color: rgb(124, 188, 15);
+}
+.b2:hover {
+  background-color: rgb(216, 15, 15);
+}
+.data-pane table {
+  border-collapse: separate;
+  border-spacing: 0 4px;
+}
+.data-pane td {
+  border: none;
+  border-style: none none none none;
+  padding: 5px;
+  border-color: #fffdcf;
+}
+.data-pane tr td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.data-pane tr td:last-child {
+  border-right-style: solid;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.data-pane tr:first-child td:first-child {
+  border-top-left-radius: 10px;
+}
+.data-pane tr:first-child td:last-child {
+  border-top-right-radius: 10px;
+}
+.data-pane tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+.data-pane tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+/*
+
+                                        RECIPES DATA PANE
+
+*/
+.recipes td button {
+  --b: 3px;
+  --s: 0.45em;
+  --color: #ffffff;
+  --color2: #ffff79;
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.recipes td button:hover,
+td button:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color2);
+  outline-offset: 0.05em;
+}
+
+.recipes {
+  table-layout: fixed;
+  width: 80%;
+  border-spacing: 20px;
+}
+
+.recipes td {
+  border: 0px solid black;
+  padding: 14px;
+}
+
+.recipes th {
+  background-color: transparent;
+  font-weight: bold;
+  height: 40px;
+}
+
+.tr1 {
+  height: 60px;
+}
+
+.tr2 td {
+  font-size: 18px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: #fffdcf;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  background-image: linear-gradient(#ffffff7d, hsl(41, 100%, 80%));
+}
+.tr2 td .scrollable-content {
+  height: 350px;
+}
+
+.pheader {
+  font-size: 22px;
+}
